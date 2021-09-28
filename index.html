@@ -38,10 +38,10 @@
             <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#prints">Prints</a>
+            <a class="nav-link js-scroll-trigger" href="#articles">Articles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#articles">Online Articles</a>
+            <a class="nav-link js-scroll-trigger" href="#snm">Speeches and Messages</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#gd">Graphic Designs</a>
@@ -189,26 +189,10 @@
       
       <!-- Articles, GD and Illustration, AVP, Events, Speeches and Msgs, Ppt -->
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="prints">       
-        <div class="row my-auto">
-          <div class="col-12">
-            <h2 class="text-center">Prints</h2>
-            <div class="mb-5 heading-border"></div>
-          </div>
-          <!-- <div class="col-md-12">
-            <div class="port-head-cont" id="div_btn">
-            </div>
-          </div> -->
-        </div>
-        <div id="prf_prints" class="row my-auto align-items-center">
-          <ul id="lst_prints"></ul>
-        </div>
-      </section>
-
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="articles">       
         <div class="row my-auto">
           <div class="col-12">
-            <h2 class="text-center">Online Articles</h2>
+            <h2 class="text-center">Articles</h2>
             <div class="mb-5 heading-border"></div>
           </div>
           <!-- <div class="col-md-12">
@@ -218,6 +202,25 @@
         </div>
         <div id="prf_articles" class="row my-auto align-items-center">
           <ul id="lst_articles"></ul>
+        </div>
+        <div id="prf_prints" class="row my-auto align-items-center">
+          <div class="row" id="lst_prints"></div>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="snm">       
+        <div class="row my-auto">
+          <div class="col-12">
+            <h2 class="text-center">Speeches and Messages</h2>
+            <div class="mb-5 heading-border"></div>
+          </div>
+          <!-- <div class="col-md-12">
+            <div class="port-head-cont" id="div_btn">
+            </div>
+          </div> -->
+        </div>
+        <div id="prf_snm" class="row my-auto align-items-center">
+          <ul id="lst_snm"></ul>
         </div>
       </section>
 
@@ -316,7 +319,7 @@
         </div>
         <div class="row mb-4">
           <div class="col-md-3 d-flex justify-content-center align-items-center">
-            <img class="img-fluid" src="https://drive.google.com/uc?export=view&id=16jk9CAhyfZAjfIwdShhJ1Lk5KRa2s0nB" alt="ebelga" />
+            <img class="img-fluid" src="https://drive.google.com/uc?export=view&id=16jk9CAhyfZAjfIwdShhJ1Lk5KRa2s0nB" alt="rrbrealino" />
           </div>
           <div class="col-md-8">
             <div>
@@ -341,7 +344,7 @@
         <div>
           <div class="row mb-4">
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-              <img class="img-fluid" src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t31.18172-8/13603339_10209515449904884_5954278422452321625_o.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_eui2=AeEr-YWzgxkomCV4zxqgx3dhF-iDX59MRekX6INfn0xF6ZuPBXCm2lYEThJj-PulSeQIfD8s1bnaW-fstUI3e4Nj&_nc_ohc=ltuIbtmTjl8AX-HegdH&_nc_ht=scontent.fmnl3-2.fna&oh=b01c592e64e18f01fe0f884ef7023691&oe=6173ED03" alt="ebelga" />
+              <img class="img-fluid" src="https://scontent.fmnl3-2.fna.fbcdn.net/v/t31.18172-8/13603339_10209515449904884_5954278422452321625_o.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_eui2=AeEr-YWzgxkomCV4zxqgx3dhF-iDX59MRekX6INfn0xF6ZuPBXCm2lYEThJj-PulSeQIfD8s1bnaW-fstUI3e4Nj&_nc_ohc=ltuIbtmTjl8AX-HegdH&_nc_ht=scontent.fmnl3-2.fna&oh=b01c592e64e18f01fe0f884ef7023691&oe=6173ED03" alt="rotorres" />
             </div>
             <div class="col-md-8">
               <h3 class="">
@@ -587,7 +590,7 @@
           $.each(_JsonData, function (index, value) {
             // $("#portfolio_output").append('<div class="col-sm-3 portfolio-item filter ' + value.category + '"><a class="portfolio-link" href="#mdl_prf" data-toggle="modal" data-row="' + value.id + '"><div class="caption-port"><div class="caption-port-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-fluid lozad" data-src="' + value.thumbnail + '" alt="' + value.title + '"></a></div>');
             // $("#prf_" + value.type).append('<div class="col-sm-3 text-center portfolio-item filter ' + value.category + '"><a class="portfolio-link" ' + (typeof value.url !== "undefined" ? ('href="' + value.url + '" target="_blank" />') : " />") + '<div class="caption-port"><div class="caption-port-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-fluid lozad" data-src="' + value.thumbnail + '" alt="' + value.title + '"></a></div>');
-            $("#prf_" + value.type).append('<div class="col-sm-3 text-center portfolio-item filter ' + value.category + '"><a class="portfolio-link" ' + (typeof value.url !== "undefined" ? ('href="' + value.url + '" target="_blank" />') : " />") + '<div class="caption-port"></div><img class="img-fluid lozad" data-src="' + value.thumbnail + '" alt="' + value.title + '"></a></div>');
+            $("#prf_" + value.type).append('<div class="col-sm-3 my-2 text-center portfolio-item filter ' + value.category + '"><a class="portfolio-link" ' + (typeof value.url !== "undefined" ? ('href="' + value.url + '" target="_blank" />') : " />") + '<div class="caption-port"></div><img class="img-fluid lozad" data-src="' + value.thumbnail + '" alt="' + value.title + '"></a></div>');
           });
 
           const observer = lozad();
@@ -664,19 +667,51 @@
       });
 
       const arr_prints = [
-      {title: "DOST-Mimaropa, CEST shore up Romblon areas", url: "https://drive.google.com/file/d/1gDnAZMctL5p9RECrUUzC6m2p8q6YkVuP/view?usp=sharing"},
-        {title: "Coral restoration in Marinduque begins", url: "https://drive.google.com/file/d/1mnJHmzZ0uBsaE3URHMtPdt6kfnUEj4NM/view?usp=sharing"},
-        {title: "Safe water for Palawan island assured", url: "https://drive.google.com/file/d/1XrOfIDY-MY6CZ6yWeg2VYgMWHY6UedF6/view?usp=sharing"},
-        {title: "Coral restoration in Marinduque improves productivity of marine resources", url: "https://drive.google.com/file/d/1Y3N3ohnv7oEiIW54UPhUc80sKVXoIoyc/view?usp=sharing"},
-        {title: "DoST program extends help to shrimp farmers", url: "https://drive.google.com/file/d/1AfMaBN70wepX_TwY9OOZ5Kw6r9RftlDK/view?usp=sharing"},
-        {title: "DoST-MIMAROPA regional invention contest extended to June 27", url: "https://drive.google.com/file/d/1J62r0r_x9MtJ09snT_QO9F2KeeXVZe2B/view?usp=sharing"},
-        {title: "DoST to conduct Luzon-wide virtual scientific meeting", url: "https://drive.google.com/file/d/17THWbERvifm5G_Vn6nU2pB6DasYEdI5W/view?usp=sharing"},
-        {title: "MinSU leads in calamansi research", url: "https://drive.google.com/file/d/1v49JP62CN1vCMNpk-kgmR1cz2oUxUNEn/view?usp=sharing"},
-        {title: "Coral restoration sinimulan sa Mimaropa", url: "https://drive.google.com/file/d/1kH5rG8ya-CWOsKq4JdVi64uWa0pq_2O5/view?usp=sharing"},
+        {title: "DOST-Mimaropa, CEST shore up Romblon areas", url: "https://drive.google.com/file/d/1gDnAZMctL5p9RECrUUzC6m2p8q6YkVuP/view?usp=sharing", thumbnail: "https://drive.google.com/uc?export=view&id=1INqp-eRs3d5hS5_nlsU4zqYFQkoyYqRl"},
+        {title: "Coral restoration in Marinduque begins", url: "https://drive.google.com/file/d/1mnJHmzZ0uBsaE3URHMtPdt6kfnUEj4NM/view?usp=sharing", thumbnail: "https://drive.google.com/uc?export=view&id=1ay4jmlpKpMASeyNnI0_gMY_NBkzZqS9h"},
+        {title: "Coral restoration in Marinduque improves productivity of marine resources", url: "https://drive.google.com/file/d/1Y3N3ohnv7oEiIW54UPhUc80sKVXoIoyc/view?usp=sharing", thumbnail: "https://drive.google.com/uc?export=view&id=1FMba5lXIw4mekHcyYe9mArir-AFbdErM"},
+        {title: "DoST program extends help to shrimp farmers", url: "https://drive.google.com/file/d/1AfMaBN70wepX_TwY9OOZ5Kw6r9RftlDK/view?usp=sharing", thumbnail: "https://drive.google.com/uc?export=view&id=1RMDnqHs1VuGLF4VKchjJ6OtsgzYhUSkF"},
+        {title: "DoST-MIMAROPA regional invention contest extended to June 27", url: "https://drive.google.com/file/d/1J62r0r_x9MtJ09snT_QO9F2KeeXVZe2B/view?usp=sharing", thumbnail: "https://drive.google.com/uc?export=view&id=1s4zN1CNVBrut_9hEN0yUwed6O1lpcOWz"},
+        {title: "DoST to conduct Luzon-wide virtual scientific meeting", url: "https://drive.google.com/file/d/17THWbERvifm5G_Vn6nU2pB6DasYEdI5W/view?usp=sharing", thumbnail: "https://drive.google.com/uc?export=view&id=1a13flG1yKZbT8k2LKiXR16erlc_qFb2w"},
       ];
 
       arr_prints.forEach(function(a)  {
-        $("#lst_prints").append("<li><a target='_blank' href='" + a.url + "'>" + a.title + "</a></li>");
+        $("#lst_prints").append("<a class='col-md-6' target='_blank' href='" + a.url + "'><img class='img-fluid lozad' alt='" + a.title + "' src='" + a.thumbnail + "' /></a>");
+      });
+
+      const arr_snm = [
+      {title: "SFTP KEYNOTE MESSAGE_2018 RSTW.pdf", url: "https://drive.google.com/file/d/1GTdY5W2UpN5zAw_kf3MLb49HlKX0mZ-u/view?usp=drivesdk SFTP KEYNOTE MESSAGE_2018 RSTW.pdf"},
+{title: "SFTP Message_Finding Happiness in the Midst of the Pandemic.pdf", url: "https://drive.google.com/file/d/14CVn83WX6HqDDWbCtQw8hMxq9fBgjwjx/view?usp=drivesdk SFTP Message_Finding Happiness in the Midst of the Pandemic.pdf"},
+{title: "SFTP-MESSAGE-CHANGING-LIVES-THROUGH-SCIENCE-AND-TECHNOLOGY (1).pdf", url: "https://drive.google.com/file/d/1n8eo_zA3wFUdoFcaa_zP-y0tpMVTgmG0/view?usp=drivesdk SFTP-MESSAGE-CHANGING-LIVES-THROUGH-SCIENCE-AND-TECHNOLOGY (1).pdf"},
+{title: "SFTP-PHILAAST-MESSAGE.pdf", url: "https://drive.google.com/file/d/1JAyCRPfQJUnukTQ6moHDY99iKXqvDDEu/view?usp=drivesdk SFTP-PHILAAST-MESSAGE.pdf"},
+{title: "Message from the Secretary 2018 Annual Report.pdf", url: "https://drive.google.com/file/d/1xk_QTJ9TY6TvApUMi4rNKvdfn5ZqrPTX/view?usp=drivesdk Message from the Secretary 2018 Annual Report.pdf"},
+{title: "Message from the Secretary 2019 Annual Report_rev2.pdf", url: "https://drive.google.com/file/d/1eIQf01A5A5pE5BHxcQLhBCtNR-VTKtiF/view?usp=drivesdk Message from the Secretary 2019 Annual Report_rev2.pdf"},
+{title: "Message from the Secretary MIMAROPA STARS 4.pdf", url: "https://drive.google.com/file/d/12B_Hct9TyL_9ddl2dUO9QSQflQBvUMuV/view?usp=drivesdk Message from the Secretary MIMAROPA STARS 4.pdf"},
+{title: "Draft Message UBLNM_MIMAROPA STARS 4.pdf", url: "https://drive.google.com/file/d/1t4QNY9k3oGrIDJNhkLzSxYnFibRaw81u/view?usp=drivesdk Draft Message UBLNM_MIMAROPA STARS 4.pdf"},
+{title: "Message from the Undersecretary for Regional Operations.pdf", url: "https://drive.google.com/file/d/1azirZPEebjmIMSDrwnSGdFE8ZeOlWOQ8/view?usp=drivesdk Message from the Undersecretary for Regional Operations.pdf"},
+{title: "Messages_2019 DOST MIMAROPA Souvenir Program_UBLNM.pdf", url: "https://drive.google.com/file/d/1SfSGtvY4t0tyomChscBjhApvzUJdWOq5/view?usp=drivesdk Messages_2019 DOST MIMAROPA Souvenir Program_UBLNM.pdf"},
+{title: "Message_UBLNM_ABINET Workshop.pdf", url: "https://drive.google.com/file/d/1i2Ybih2arr4XbXz6n0zEWe-UG6fnGKje/view?usp=drivesdk Message_UBLNM_ABINET Workshop.pdf"},
+{title: "KEYNOTE-MESSAGE_USEC.-MABBORANG_revKGT.pdf", url: "https://drive.google.com/file/d/1rJ1SaLNkgI4WwOAX8fLNle3-Cfx4UwVr/view?usp=drivesdk KEYNOTE-MESSAGE_USEC.-MABBORANG_revKGT.pdf"},
+{title: "USEC-SANCHO-MESSAGE-CHANGING-LIVES-THROUGH-SCIENCE (1).pdf", url: "https://drive.google.com/file/d/1z9gRJ8ROPR0qT40R8Ecj4RXPMD7hKKgy/view?usp=drivesdk USEC-SANCHO-MESSAGE-CHANGING-LIVES-THROUGH-SCIENCE (1).pdf"},
+{title: "MESSAGE FROM THE REGIONAL DIRECTOR.pdf", url: "https://drive.google.com/file/d/1pMWmmgN0Cz81NrZeEOaMTNi7T-2i3H0_/view?usp=drivesdk MESSAGE FROM THE REGIONAL DIRECTOR.pdf"},
+{title: "Message_BIMP EAGA Live X 2019.pdf", url: "https://drive.google.com/file/d/1yMdJQXpsbqudZwbd3fWmRAfwhPnC8C-r/view?usp=drivesdk Message_BIMP EAGA Live X 2019.pdf"},
+{title: "OPENING MESSAGE_8TH STIRDC R&D CONFERENCE.pdf", url: "https://drive.google.com/file/d/1uKYhgz0KxrV_LwGzjx_xnmedTwcW8g4V/view?usp=drivesdk OPENING MESSAGE_8TH STIRDC R&D CONFERENCE.pdf"},
+{title: "OPENING-REMARKS_ABINET_final.pdf", url: "https://drive.google.com/file/d/14-NtUnWxOYykXMehx8_Npg9oD3kZGYIe/view?usp=drivesdk OPENING-REMARKS_ABINET_final.pdf"},
+{title: "WELCOME MESSAGE_CEST YEAR-END REVIEW 2019.pdf", url: "https://drive.google.com/file/d/1ZXdazsxstnPTz5zF7PStRIRPBJGIZg-6/view?usp=drivesdk WELCOME MESSAGE_CEST YEAR-END REVIEW 2019.pdf"},
+{title: "WELCOME MESSAGE_ETURO WEBINAR SERIES.pdf", url: "https://drive.google.com/file/d/1971N9YrfGZ9SHRkfV8wqS7TkVdYBzcy8/view?usp=drivesdk WELCOME MESSAGE_ETURO WEBINAR SERIES.pdf"},
+{title: "WELCOME MESSAGE_FUNDERS' CONFERENCE_MARCH112019.pdf", url: "https://drive.google.com/file/d/1zd2DYWyZ0cxdVrKpZehnk_wpO16L1woA/view?usp=drivesdk WELCOME MESSAGE_FUNDERS' CONFERENCE_MARCH112019.pdf"},
+{title: "WELCOME MESSAGE_iFWDPH Orientation.pdf", url: "https://drive.google.com/file/d/16QmdKy2Vm0B4sDZeCtyE4sr29s8k_VYV/view?usp=drivesdk WELCOME MESSAGE_iFWDPH Orientation.pdf"},
+{title: "Welcome Message_Pre-Funders Forum.pdf", url: "https://drive.google.com/file/d/1vwsKrU7oYAEslnQ-zzk7mybru7y76cnT/view?usp=drivesdk Welcome Message_Pre-Funders Forum.pdf"},
+{title: "WELCOME MESSAGE_RDIC STRATEGIC PLANNING WORKSHOP.pdf", url: "https://drive.google.com/file/d/1lh_ohtiaojAsztcjHJ_lhNT09XvDjz3t/view?usp=drivesdk WELCOME MESSAGE_RDIC STRATEGIC PLANNING WORKSHOP.pdf"},
+{title: "WELCOME MESSAGE_TECHNO FAIR FNRI SERIES.pdf", url: "https://drive.google.com/file/d/1eEeBTCcOkdh0ZGOQ0g3PxCU0eGFCCSIz/view?usp=drivesdk WELCOME MESSAGE_TECHNO FAIR FNRI SERIES.pdf"},
+{title: "WELCOME-MESSAGE_RSTL-INAUGURATION.pdf", url: "https://drive.google.com/file/d/1A8tlKuzPpECkRojc9Hm8QqYFLVPqULA4/view?usp=drivesdk WELCOME-MESSAGE_RSTL-INAUGURATION.pdf"},
+{title: "Dr.-Montoya-Opening-Message-PHILAAST.pdf", url: "https://drive.google.com/file/d/1jg7sY5zqOgnFLIZrMJWFKhgBEktNA1_X/view?usp=drivesdk Dr.-Montoya-Opening-Message-PHILAAST.pdf"},
+{title: "Message from the Governor of Romblon.pdf", url: "https://drive.google.com/file/d/1bCAbvSlue3l5z6xocFiSRCWr7Ee8nLRB/view?usp=drivesdk Message from the Governor of Romblon.pdf"},
+{title: "OPENING MESSAGE_SIR JESSE_NSED.pdf", url: "https://drive.google.com/file/d/1PermKaDuyZaFiZj5229aTZrCQ4VF6jgR/view?usp=drivesdk OPENING MESSAGE_SIR JESSE_NSED.pdf"},
+      ];
+
+      arr_snm.forEach(function(a)  {
+        $("#lst_snm").append("<li><a target='_blank' href='" + a.url + "'>" + a.title + "</a></li>");
       });
 
       $(document).ready(function()  {
